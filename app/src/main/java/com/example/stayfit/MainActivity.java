@@ -17,17 +17,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar=findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
-        button1=findViewById(R.id.under18btn);
-        button2=findViewById(R.id.after18btn);
+        button1 = findViewById(R.id.under18btn);
+        button2 = findViewById(R.id.after18btn);
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,Before18.class);
+                Intent intent = new Intent(MainActivity.this, Before18.class);
                 startActivity(intent);
 
             }
@@ -36,42 +36,35 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,After18.class);
+                Intent intent = new Intent(MainActivity.this, After18.class);
             }
         });
-
-
     }
 
+        public void beforeage18 (View view)
+        {
+
+            Intent intent = new Intent(MainActivity.this, Before18.class);
+            startActivity(intent);
 
 
-    public void beforeage18(View view)
-    {
+        }
 
-        Intent intent=new Intent(MainActivity.this,Before18.class);
-        startActivity(intent);
+        public void afterage18 (View view){
 
 
+            Intent intent = new Intent(MainActivity.this, After18.class);
+            startActivity(intent);
 
+
+        }
+
+        public void food (View view){
+
+
+            Intent intent = new Intent(MainActivity.this, NutritionTips.class);
+            startActivity(intent);
+
+
+        }
     }
-
-    public void afterage18(View view){
-
-
-        Intent intent=new Intent(MainActivity.this,After18.class);
-        startActivity(intent);
-
-
-
-    }
-
-    public void food(View view){
-
-
-        Intent intent=new Intent(MainActivity.this,NutritionTips.class);
-        startActivity(intent);
-
-
-
-    }
-}
